@@ -4,6 +4,10 @@ feishu_url: "https://www.feishu.cn/wiki/DoDZwzgXtiDbyrk2aINc0DMLnQf"
 last_synced: "2026-05-03"
 ---
 
+> **配套资源**  
+> 源码仓库 · [github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)  
+> 在线阅读 · [inferloop.dev/openclaw](https://inferloop.dev/openclaw)
+
 # 前言 — 为什么要读一个 Agent 项目的源码
 
 OpenClaw 用五个月从零增长到 GitHub 上 Stars 最多的软件仓库。它的项目背景和发展历程，第 1 章会详细展开。

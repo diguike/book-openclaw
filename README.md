@@ -6,6 +6,10 @@ last_synced: ""
 
 # OpenClaw 源码解析：现代 Agent 系统的架构设计与工程实践
 
+> 在线阅读 · [inferloop.dev/openclaw](https://inferloop.dev/openclaw)  
+> 所有书目 · [inferloop.dev](https://inferloop.dev)
+
+
 一本面向工程师的 Agent 系统源码解读书籍。通过深入剖析 OpenClaw（GitHub 350K+ Stars）的架构设计和代码实现，帮助读者掌握构建现代 Agent 系统的核心工程能力。
 
 ## 这本书解决什么问题
@@ -37,3 +41,18 @@ OpenClaw 是目前最活跃的开源 Agent 项目之一，TypeScript 实现，�
 - 参考源码：`_references/openclaw/`
 - 飞书 Wiki：（发布后补充）
 - GitHub：（发布后补充）
+
+
+## 相关书
+
+来自同一作者的其他书:
+
+- [《Hermes Agent 源码解读》](https://inferloop.dev/hermes-agent)
+- [《LLM Infra 工程实战》](https://inferloop.dev/llm-infra)
+- [《AI Token 中转站实战》](https://inferloop.dev/llm-gateway)
+- [《Agent Memory 工程实战》](https://inferloop.dev/claude-mem)
+- [《百万级 AI Agent 平台架构》](https://inferloop.dev/enterprise-agent)
+- [《Transformer 教学》](https://inferloop.dev/transformer)
+- [《Claude Code Skill 开发指南》](https://inferloop.dev/claude-skill)
+- [《Claude 插件官方指南》](https://inferloop.dev/claude-plugins)
+- [《自己动手写 AI Agent》](https://inferloop.dev/ling-agent)
