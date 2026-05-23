@@ -532,3 +532,9 @@ export function buildEmptyExplicitToolAllowlistError(params: {
 2. 在 OpenClaw 源码中找到 Tool Profile 的四档预设（`full`、`coding`、`messaging`、`minimal`），对比每一档启用的工具集合。选择 `minimal` 档位启动一个 Agent，测试它能完成哪些任务、不能完成哪些任务，验证档位定义是否与文档一致。
 
 3. 阅读工具 Schema 适配的 `flattenUnionSchema` 函数，找一个使用了 `oneOf` 的工具定义（比如 `exec` 工具的参数 schema），在拍平前后分别打印 schema 内容，观察拍平过程丢失了哪些语义信息。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -552,3 +552,9 @@ Bash 工具的设计可以提炼出几个可迁移的架构模式。
 **动手题**
 
 3. 在 OpenClaw 中执行一条需要较长时间的命令（比如 `sleep 10 && echo done`），在命令执行过程中通过 `process` 工具查看进程状态。然后尝试用 `process` 工具的 kill 操作终止该进程，观察进程注册表中的状态变化。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

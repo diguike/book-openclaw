@@ -698,3 +698,9 @@ OpenClaw 的语音系统体现了几个值得学习的架构决策：
 **动手题**
 
 3. 配置 OpenClaw 的 TTS 功能，选择一个支持的 TTS Provider（如果没有云端 API Key，可以使用本地 CLI TTS）。发送一条消息并听取语音回复。然后修改 TTS 的 voice 配置（比如切换语音角色或语速），对比前后的语音输出差异。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -385,3 +385,9 @@ private buildAnthropicMessages(
 2. 在 Mini OpenClaw 中添加一个新的工具：`list_files`，接受一个 `directory` 参数，返回该目录下的文件列表。在 `src/tools/` 下创建工具实现，在 `src/tools/index.ts` 中注册，然后通过 WebChat 客户端测试该工具是否能被 Agent 正确调用。
 
 3. 修改 Mini OpenClaw 的 `src/agent/runtime.ts`，添加一个工具调用次数上限（比如单轮对话最多执行 20 次工具调用）。当达到上限时，向模型发送一条系统消息"工具调用次数已达上限，请直接给出回复"。测试该限制是否能有效防止工具调用死循环。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

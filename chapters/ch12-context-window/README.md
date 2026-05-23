@@ -470,3 +470,9 @@ if (shouldEagerWarmContextWindowCache()) {
 **动手题**
 
 3. 在 OpenClaw 中开启一个长对话（超过 20 轮），持续要求 Agent 读取文件、执行命令。观察 Session 的 `.jsonl` 文件大小变化，以及 Compaction 触发的时机。找到 Compaction 生成的摘要消息（在 transcript 中带有特定标记），评估摘要内容是否完整覆盖了之前的对话要点。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

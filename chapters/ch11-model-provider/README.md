@@ -586,3 +586,9 @@ sequenceDiagram
 **动手题**
 
 3. 在 `openclaw.json` 中配置两个 Provider（比如 Anthropic 和 OpenAI），将其中一个的 API Key 故意设置为无效值。发送一条消息，观察 Gateway 日志中的 fallback 决策过程。确认 `logModelFallbackDecision` 输出了哪些信息，以及 failover 后响应是否正常完成。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

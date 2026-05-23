@@ -585,3 +585,9 @@ OpenClaw 的应对是多层防御：白名单正则（14.9 节）、来源标记
 **动手题**
 
 3. 编写一个简单的 SKILL.md 文件（比如"代码审查助手"），包含 YAML frontmatter 的完整字段（name、description、homepage、metadata.openclaw 下的 always/requires 等）和 Markdown 正文。将其放到 OpenClaw 的 `skills/` 目录下，验证该 Skill 是否出现在 Agent 的工具索引中。然后在对话中触发该 Skill 的加载，观察 System Prompt 中注入的内容。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

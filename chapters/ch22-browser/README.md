@@ -458,3 +458,9 @@ Skill 的核心规则包括：
 2. 要求 Agent 打开一个网页（比如 `https://example.com`）并截图。观察 Gateway 日志中 CDP/Playwright 的连接建立过程，确认 Agent 使用的是哪种浏览器自动化方案。然后在配置中切换到另一种方案（如果默认是 Playwright 就切换到 CDP），对比两者的截图结果和执行速度。
 
 3. 在 OpenClaw 源码中找到 Web Fetch 的 provider 选择逻辑。配置两个不同的 fetch provider（比如内置 fetch 和一个第三方服务），测试 fallback 行为——故意让第一个 provider 失败，确认系统是否正确切换到第二个 provider。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

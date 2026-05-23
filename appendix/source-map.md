@@ -236,3 +236,9 @@ last_synced: "2026-05-03"
 | `src/hooks/` | 钩子系统（生命周期回调） | 第 4 章 |
 | `ui/` | Web 控制台前端（Control UI） | 第 4 章 |
 | `apps/` | macOS / iOS / Android 客户端 | 第 25 章 |
+
+---
+
+> 本附录来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

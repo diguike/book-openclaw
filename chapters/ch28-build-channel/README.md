@@ -562,3 +562,9 @@ examples/custom-webhook/
 2. 在本章 custom-webhook 的基础上，添加一个简单的消息签名验证功能：入站请求必须带上 `X-Signature` header，Channel 用预配置的密钥验证签名。这模拟了 Telegram Bot API 和 GitHub Webhook 的安全验证机制。
 
 3. 将 custom-webhook Channel 注册到 Gateway 后，用 `curl` 发送一条 JSON 格式的测试消息到 webhook 端点，验证消息能被 Gateway 接收并路由到 Agent。观察 Agent 的回复消息是如何通过出站转换函数格式化后返回给调用者的。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

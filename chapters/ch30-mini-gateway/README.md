@@ -361,3 +361,9 @@ export function loadConfig(): MiniOpenClawConfig {
 2. 在 Mini OpenClaw 的 `src/gateway/server.ts` 中，添加一个简单的 HTTP 健康检查端点（`GET /health`），返回当前活跃的 WebSocket 连接数和 Session 数量。参考 OpenClaw 的 `/healthz` 和 `/readyz` 的分层设计，思考两者的区别。
 
 3. 修改 Mini OpenClaw 的 Session Store，为 JSONL 文件添加一个简单的并发保护：在写入 transcript 时使用 `fs.open` 的 `wx` flag 创建一个 `.lock` 文件，写入完成后删除。测试当两个请求同时到达时，锁机制是否能防止并发写入。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -551,3 +551,9 @@ Agent 系统的状态管理直接决定了它能支撑多复杂的工作流、�
 2. OpenClaw、LangGraph、CrewAI 三者的核心抽象分别是 Gateway/Session/Channel、StateGraph/Node/Edge、Crew/Agent/Task。如果你要从零设计一个 Agent 框架，面向的场景是"企业内部的自动化工作流平台"（需要审批流、权限控制、审计日志），你会选择哪种抽象模型作为基础？或者你会设计一种不同的抽象？给出你的设计理由。
 
 3. 本书从第 1 章到第 34 章，从全景概述到具体实现再到设计模式提炼，走了一条"自顶向下分析 → 自底向上实现 → 抽象总结"的路径。回顾全书，你认为 OpenClaw 的架构中最值得学习的一个设计决策是什么？最值得质疑的一个设计决策是什么？给出你的判断依据。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

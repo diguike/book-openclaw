@@ -412,3 +412,9 @@ openclaw gateway --verbose
 2. 在本地部署 OpenClaw 后，打开 `openclaw.json`，尝试修改 `defaultModel` 为另一个模型（如从 Claude 切换到 GPT），然后重启 Gateway 并发送一条消息。观察 Gateway 日志，确认模型切换是否生效。如果切换失败，排查原因（API Key 配置、模型名称格式等）。
 
 3. 阅读 `src/entry.ts` 中的 `ensureSingleInstance` 逻辑（进程守卫），理解它是如何防止多个 Gateway 实例同时运行的。然后尝试在两个终端中同时执行 `openclaw gateway`，观察第二个实例的错误提示。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

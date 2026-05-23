@@ -497,3 +497,9 @@ System Prompt 组装是 OpenClaw Agent 运行时的第一道工序。在模型�
 **动手题**
 
 3. 创建一个测试 workspace，在其中放置不同大小的 `CLAUDE.md`（比如 1KB、10KB、50KB），启动 OpenClaw 并观察 System Prompt 中实际注入了多少内容。通过日志或调试工具，确认 `bootstrapMaxChars` 的默认值是多少，以及超出预算时的截断行为。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

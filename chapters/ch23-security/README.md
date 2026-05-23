@@ -719,3 +719,9 @@ function countBySeverity(findings: SecurityAuditFinding[]): SecurityAuditSummary
 **动手题**
 
 3. 运行 `openclaw security audit --deep`，检查你的 OpenClaw 实例的安全状态。记录所有 critical 和 warn 级别的发现。针对每个发现，判断它在你的使用场景下是否需要修复，以及修复的代价（是否会影响日常使用体验）。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

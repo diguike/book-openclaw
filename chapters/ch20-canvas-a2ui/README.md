@@ -452,3 +452,9 @@ globalThis.OpenClaw.sendUserAction = sendUserAction;
 **动手题**
 
 3. 在 OpenClaw 中要求 Agent 创建一个简单的 Canvas 页面（比如一个带按钮的计数器），观察 Canvas Host 服务的启动过程。通过浏览器开发者工具检查 Canvas 页面的请求，找到 Capability Token 在哪个 HTTP header 或 URL 参数中传递，以及 Token 的有效期是多长。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

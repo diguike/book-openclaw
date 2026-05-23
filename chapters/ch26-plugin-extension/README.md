@@ -487,3 +487,9 @@ OpenClaw 的插件系统沿着三条设计轴线展开：
 **动手题**
 
 3. 参考 `extensions/` 目录下任意一个现有的 Channel Extension 的代码结构，创建一个最简单的"echo" Plugin：它在 `after_agent_turn` 钩子中将 Agent 的回复打印到 Gateway 的控制台日志。验证该 Plugin 能被 Gateway 正确加载和执行。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -674,3 +674,9 @@ OpenClaw 的工程结构可以用三句话概括：
 2. 在 OpenClaw 源码中，沿着 `src/entry.ts` → `src/run-main.ts` → `src/gateway-cli/run.ts` 的调用链，画出从 `openclaw gateway` 命令到 `startGatewayServer` 被调用之间的完整启动路径。标注每个文件负责的职责（进程守卫、命令路由、快速路径判断等）。
 
 3. 查看 `pnpm-workspace.yaml` 和根 `package.json`，找出所有 workspace 包的列表。选一个 Extension 包（比如 `extensions/telegram`），检查它的 `package.json` 中对 Plugin SDK 的依赖声明方式，理解 `workspace:*` 协议在开发时和发布时的行为差异。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

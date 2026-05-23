@@ -318,3 +318,9 @@ You are an AI assistant powered by Mini OpenClaw.
 2. 为 Mini OpenClaw 编写一个新的 SKILL.md 文件（比如"数据库查询助手"），放到项目的 skills 目录下。启动 Mini OpenClaw，在对话中验证该 Skill 的描述是否出现在 Agent 的工具索引中，以及 Agent 是否能根据用户意图正确加载该 Skill 的完整内容。
 
 3. 修改 Mini OpenClaw 的 `src/memory/manager.ts`，添加 Daily Log 功能：每次对话结束后，将对话摘要自动追加到一个按日期命名的日志文件中（如 `daily/2026-04-29.md`）。在下次对话开始时，将最近 3 天的 Daily Log 注入到 System Prompt 中作为短期记忆。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

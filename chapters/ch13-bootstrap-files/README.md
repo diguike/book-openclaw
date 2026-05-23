@@ -395,3 +395,9 @@ Bootstrap Files 是 OpenClaw 的"文件即配置"哲学的核心体现。7 个 M
 2. 在一个测试 workspace 中创建完整的 7 个 Bootstrap Files（SOUL.md、AGENTS.md、IDENTITY.md、USER.md、TOOLS.md、BOOTSTRAP.md、MEMORY.md），每个文件写入 2-3 行简短的指令。启动 OpenClaw，通过对话验证每个文件的内容是否生效。然后删除其中一个文件（比如 IDENTITY.md），观察 Agent 行为是否发生变化。
 
 3. 编写一个超大的 `SOUL.md`（超过 `bootstrapMaxChars` 预算），观察 OpenClaw 的截断行为。通过日志或调试确认哪些内容被保留、哪些被丢弃，验证截断策略是否符合本章描述的优先级规则。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

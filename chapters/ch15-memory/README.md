@@ -725,3 +725,9 @@ OpenClaw 的 Memory 系统通过四层架构解决了 Agent 的长期记忆问�
 **动手题**
 
 3. 在 OpenClaw 中进行一系列有主题的对话（比如讨论一个具体的技术方案），然后在新 Session 中查询相关内容，观察 Memory 系统的检索结果。对比向量检索和关键词检索各自返回了什么，理解混合检索的实际效果。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -349,3 +349,9 @@ OpenClaw 支持通过环境变量覆盖配置或控制运行时行为。以下�
 | `NODE_OPTIONS` | Node.js 运行时选项（如 `--max-old-space-size=4096`） |
 
 配置优先级从高到低：环境变量 > `openclaw.json` > Agent 配置 > 默认值。`${ENV_VAR}` 语法可在配置文件中引用环境变量，OpenClaw 会在加载时进行替换。
+
+---
+
+> 本附录来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -581,3 +581,9 @@ Gateway 的设计围绕一个核心前提：它是一个给个人用的守护进
 **动手题**
 
 3. 用 `wscat` 或浏览器的 WebSocket 调试工具连接到运行中的 Gateway（默认 `ws://localhost:18789`），手动发送一个 `hello` 帧，观察返回的 `hello-ok` 帧中包含哪些能力声明字段。对比源码中 `hello-ok` 的构造逻辑，理解能力协商的完整内容。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

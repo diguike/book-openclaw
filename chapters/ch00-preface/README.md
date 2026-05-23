@@ -63,3 +63,9 @@ ch03（快速上手）→ ch29-33（Mini OpenClaw）→ ch27-28（开发 Skill �
 ## 致谢
 
 感谢 Peter Steinberger 和 OpenClaw 社区的所有贡献者。开源让这样的学习成为可能。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

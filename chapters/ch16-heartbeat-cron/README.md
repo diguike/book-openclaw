@@ -378,3 +378,9 @@ Heartbeat 和 Cron 的存在，代表了 OpenClaw 对 Agent 角色的一个根�
 2. 在 OpenClaw 的 workspace 中创建一个 `HEARTBEAT.md`，定义 2-3 项简单的检查任务（比如"检查 /tmp 目录是否存在"、"检查当前时间是否在工作时间内"）。配置 Heartbeat 间隔为较短的时间（如 2 分钟），启动 Gateway 后观察 Agent 的 Heartbeat 行为。确认 HEARTBEAT_OK 的静默抑制是否正常工作。
 
 3. 配置一个 Cron 任务（比如每 5 分钟执行一次"列出 /tmp 目录下最近修改的文件"），观察 Cron Session 是否与主 Session 隔离——在 Cron 任务执行期间，主 Session 是否仍然可以正常对话。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -191,3 +191,9 @@ mini-openclaw/
 2. 阅读 Mini OpenClaw 的 `examples/mini-openclaw/` 目录结构，对照本章的架构图，确认每个源文件对应架构图中的哪个模块。画出你自己理解的模块依赖关系图（哪些模块 import 了哪些模块）。
 
 3. 在 Mini OpenClaw 的目录结构设计基础上，规划一个新模块的位置：如果要添加一个简单的 Cron 定时任务功能（每隔 N 分钟让 Agent 执行一个预设指令），这个模块的代码应该放在哪个目录下？它需要与哪些现有模块交互？
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

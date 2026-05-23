@@ -674,3 +674,9 @@ OpenClaw 的 Channel 系统用 Bridge Pattern 实现了一个干净的消息抽�
 **动手题**
 
 3. 阅读 `extensions/telegram` 的入站消息转换代码，找到将 Telegram Update 对象转换为 `MsgContext` 的函数。记录转换过程中哪些 Telegram 特有的字段被保留了、哪些被丢弃了。然后选另一个 Channel（比如 Discord），做同样的分析，对比两个渠道在标准化过程中的差异。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

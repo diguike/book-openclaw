@@ -418,3 +418,9 @@ await updateSessionStore(target.storePath, (s) => {
 **动手题**
 
 3. 找到 OpenClaw 数据目录下的一个 `.jsonl` transcript 文件（通常在 `~/.openclaw/sessions/` 下），用 `cat` 查看其内容。分析第一行的 Session header 包含哪些字段，后续消息行的结构是什么。尝试用 `jq` 提取出所有 `role: "user"` 的消息内容。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

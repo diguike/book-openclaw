@@ -410,3 +410,9 @@ mini-openclaw/
 2. 启动 Mini OpenClaw 的完整系统，进行一次端到端测试：在 WebChat 中要求 Agent 创建一个文件、读取该文件的内容、然后修改文件。检查每一步的 Session transcript（JSONL 文件），确认消息记录是否完整覆盖了用户输入、模型输出、工具调用和工具结果。
 
 3. 在 Mini OpenClaw 中实现一个简单的消息格式化功能：当 Agent 的回复包含 Markdown 代码块时，WebChat 客户端能正确渲染代码高亮（可以使用 `highlight.js` 或简单的 `<pre><code>` 标签）。修改 `webchat.html` 中的消息渲染逻辑，测试代码块、列表、粗体等 Markdown 元素的渲染效果。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

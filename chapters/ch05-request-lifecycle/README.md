@@ -456,3 +456,9 @@ OpenClaw 的请求处理有一条清晰的同步/异步分界线，理解这条�
 **动手题**
 
 3. 在 OpenClaw 源码中找到 `dispatchInboundMessage` 函数，跟踪一条 `chat.send` 请求从进入该函数到 Agent Runner 启动的完整路径。记录这条路径上涉及的所有文件名和关键函数名，画出你自己的调用关系图。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

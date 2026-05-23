@@ -581,3 +581,9 @@ OpenClaw 的多 Agent 路由系统遵循几个清晰的设计原则：
 2. 在 `openclaw.json` 中配置两个 Agent（比如一个"代码助手"和一个"日常助手"），分别绑定到不同的 workspace 目录。通过 Binding 规则将同一个渠道的不同群组路由到不同的 Agent。验证两个 Agent 的 Session 是否在文件系统上物理隔离（检查各自的 session 目录）。
 
 3. 在已有的两个 Agent 配置基础上，添加一条 fallback binding（不指定任何过滤条件），确保未匹配到任何规则的消息能路由到默认 Agent。发送一条来自新联系人的消息，确认 fallback 规则生效。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

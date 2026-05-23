@@ -114,3 +114,9 @@ Agent 的核心身份定义文件。文件内容在 Agent 启动时注入到 Sys
 
 **Workspace**
 Agent 的工作目录。包含 Agent 的配置文件、Skill 文件和项目上下文。Workspace 级的 Skill 和 Agent 配置优先于全局配置，实现项目级的 Agent 定制。参见第 18 章。
+
+---
+
+> 本附录来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

@@ -502,3 +502,9 @@ const emitReasoningStream = (text: string) => {
 **动手题**
 
 3. 在 OpenClaw 源码中找到 `emitBlockChunk` 函数，阅读其分块逻辑。构造一个包含 Markdown 代码块的长文本（比如一段 2000 字符的代码片段），在代码中模拟该文本的流式到达过程，验证代码块保护逻辑是否会把代码块拆分到两个 chunk 中。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

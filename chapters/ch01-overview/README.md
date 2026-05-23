@@ -143,3 +143,9 @@ OpenClaw 的 VISION.md 中明确回答了这个问题：
 **动手题**
 
 3. 克隆 OpenClaw 仓库，用 `cloc` 或 `tokei` 统计各目录的代码行数，验证本章给出的"140 万行代码"和"4,500 个非测试 TS 文件"等数字是否准确。观察 `extensions/` 和 `src/` 的代码量比例，思考这个比例说明了什么。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

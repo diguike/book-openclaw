@@ -470,3 +470,9 @@ OpenClaw 的部署架构围绕一个核心事实设计：Gateway 是一个有状
 2. 用 Docker Compose 部署 OpenClaw，配置 Volume 挂载使 Session 数据持久化。然后模拟一次故障恢复：停止容器，检查 Volume 中的 Session 文件是否完整，重新启动容器，确认之前的对话历史是否可以恢复。
 
 3. 运行 `openclaw security audit` 检查你的部署配置。如果 Gateway 绑定了 `0.0.0.0`（而不是 `127.0.0.1`），审计工具会给出什么级别的警告？根据你的实际网络环境，判断这个警告是否需要处理。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

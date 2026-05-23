@@ -442,3 +442,9 @@ agents:
 **动手题**
 
 3. 在 OpenClaw 中触发一个需要 Sub-Agent 的任务（比如要求 Agent "同时在三个不同目录下创建一个 hello.txt 文件"）。观察 Gateway 日志中 `sessions_spawn` 的调用、子 Session 的创建、以及 Announce 消息的回传过程。检查子 Session 的 transcript 文件，确认它们与主 Session 是物理隔离的。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)

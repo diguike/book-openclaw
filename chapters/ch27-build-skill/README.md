@@ -451,3 +451,9 @@ openclaw clawhub install issue-tracker
 2. 基于本章的 Issue Tracker Skill 模板，编写一个新的 Skill（比如"Git Commit Message 规范检查"），定义 YAML frontmatter 中的 `globs` 字段使其只在 Git 仓库中生效。将 Skill 部署到 OpenClaw 并测试其触发条件是否正确。
 
 3. 运行本章 `examples/` 目录中的 `validate-skill.ts` 验证脚本，检查你在上一题中编写的 SKILL.md 格式是否正确。故意引入一个格式错误（比如缺少 `name` 字段），观察验证脚本给出的错误信息。
+
+---
+
+> 本章来自《OpenClaw 源码解析》开源版 · 作者「递归客」  
+> 在线阅读完整书系：[inferloop.dev](https://inferloop.dev)  
+> 源码仓库：[github.com/diguike/book-openclaw](https://github.com/diguike/book-openclaw)
