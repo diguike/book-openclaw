@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini OpenClaw - WebChat</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #16213e;
+      padding: 16px 24px;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #a0c4ff;
+    }
+    header .status {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+    header .status.connected { color: #4caf50; }
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 24px;
+    }
+    .message {
+      margin-bottom: 16px;
+      max-width: 80%;
+      line-height: 1.6;
+    }
+    .message.user {
+      margin-left: auto;
+      background: #2a4a8a;
+      padding: 10px 16px;
+      border-radius: 12px 12px 4px 12px;
+    }
+    .message.assistant {
+      background: #2a2a4a;
+      padding: 10px 16px;
+      border-radius: 12px 12px 12px 4px;
+    }
+    .message.tool {
+      font-size: 13px;
+      color: #aaa;
+      padding: 6px 12px;
+      background: #1e1e3a;
+      border-left: 3px solid #ffa726;
+      border-radius: 4px;
+    }
+    .message.error {
+      color: #ff5252;
+      background: #2a1a1a;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+    .message pre {
+      background: #111;
+      padding: 8px 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+    .message code {
+      background: #333;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    #input-area {
+      padding: 16px 24px;
+      background: #16213e;
+      border-top: 1px solid #2a2a4a;
+      display: flex;
+      gap: 12px;
+    }
+    #input-area input {
+      flex: 1;
+      background: #1a1a2e;
+      border: 1px solid #3a3a5a;
+      color: #e0e0e0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+    #input-area input:focus {
+      border-color: #a0c4ff;
+    }
+    #input-area button {
+      background: #2a4a8a;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #input-area button:hover { background: #3a5a9a; }
+    #input-area button:disabled {
+      background: #333;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mini OpenClaw</h1>
+    <div class="status" id="status">Connecting...</div>
+  </header>
+  <div id="messages"></div>
+  <div id="input-area">
+    <input type="text" id="input" placeholder="输入消息..." autocomplete="off" />
+    <button id="send" disabled>发送</button>
+  </div>
+
+  <script>
+    const WS_URL = `ws://${location.hostname || 'localhost'}:3210`;
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('input');
+    const sendBtn = document.getElementById('send');
+    const statusEl = document.getElementById('status');
+
+    let ws = null;
+    let sessionId = null;
+    let currentAssistantEl = null;
+    let currentAssistantText = '';
+
+    function connect() {
+      ws = new WebSocket(WS_URL);
+
+      ws.onopen = () => {
+        statusEl.textContent = 'Connecting...';
+        statusEl.className = 'status';
+      };
+
+      ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        handleServerEvent(data);
+      };
+
+      ws.onclose = () => {
+        statusEl.textContent = 'Disconnected. Reconnecting...';
+        statusEl.className = 'status';
+        sendBtn.disabled = true;
+        setTimeout(connect, 3000);
+      };
+
+      ws.onerror = () => {
+        statusEl.textContent = 'Connection error';
+        statusEl.className = 'status';
+      };
+    }
+
+    function handleServerEvent(event) {
+      switch (event.type) {
+        case 'connected':
+          sessionId = event.sessionId;
+          statusEl.textContent = `Connected (session: ${sessionId.slice(0, 8)}...)`;
+          statusEl.className = 'status connected';
+          sendBtn.disabled = false;
+          break;
+
+        case 'chunk':
+          if (!currentAssistantEl) {
+            currentAssistantEl = addMessage('assistant', '');
+            currentAssistantText = '';
+          }
+          currentAssistantText += event.content;
+          currentAssistantEl.innerHTML = formatMarkdown(currentAssistantText);
+          scrollToBottom();
+          break;
+
+        case 'message_done':
+          currentAssistantEl = null;
+          currentAssistantText = '';
+          sendBtn.disabled = false;
+          break;
+
+        case 'tool_start':
+          addMessage('tool', `🔧 调用工具: ${event.toolName}...`);
+          break;
+
+        case 'tool_done':
+          addMessage('tool', `✅ ${event.toolName} 完成`);
+          break;
+
+        case 'error':
+          addMessage('error', `错误: ${event.message}`);
+          sendBtn.disabled = false;
+          break;
+
+        case 'pong':
+          break;
+      }
+    }
+
+    function addMessage(role, content) {
+      const el = document.createElement('div');
+      el.className = `message ${role}`;
+      el.innerHTML = formatMarkdown(content);
+      messagesEl.appendChild(el);
+      scrollToBottom();
+      return el;
+    }
+
+    function formatMarkdown(text) {
+      return text
+        .replace(/```([\s\S]*?)```/g, '<pre>$1</pre>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+    }
+
+    function scrollToBottom() {
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function sendMessage() {
+      const content = inputEl.value.trim();
+      if (!content || !ws || ws.readyState !== WebSocket.OPEN) return;
+
+      addMessage('user', content);
+      ws.send(JSON.stringify({ type: 'message', sessionId, content }));
+      inputEl.value = '';
+      sendBtn.disabled = true;
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    inputEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    // 心跳
+    setInterval(() => {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: 'ping' }));
+      }
+    }, 30000);
+
+    connect();
+  </script>
+</body>
+</html>

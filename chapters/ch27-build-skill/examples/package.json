@@ -1,0 +1,14 @@
+{
+  "name": "openclaw-skill-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenClaw Skill 开发示例代码",
+  "type": "module",
+  "scripts": {
+    "validate": "npx tsx validate-skill.ts ./issue-tracker/SKILL.md"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

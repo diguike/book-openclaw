@@ -1,0 +1,32 @@
+{
+  "id": "custom-webhook",
+  "activation": {
+    "onStartup": false
+  },
+  "channels": ["custom-webhook"],
+  "channelEnvVars": {
+    "custom-webhook": [
+      "CUSTOM_WEBHOOK_SECRET",
+      "CUSTOM_WEBHOOK_CALLBACK_URL"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "secret": {
+        "type": "string",
+        "description": "Webhook 认证密钥"
+      },
+      "callbackUrl": {
+        "type": "string",
+        "description": "默认回调 URL"
+      },
+      "webhookPath": {
+        "type": "string",
+        "description": "自定义 Webhook 路径",
+        "default": "/plugins/custom-webhook/inbound"
+      }
+    }
+  }
+}

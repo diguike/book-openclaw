@@ -1,0 +1,23 @@
+{
+  "name": "@openclaw-examples/custom-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenClaw Channel Extension 示例：基于 HTTP Webhook 的自定义渠道",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test src/webhook-handler.test.ts"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
