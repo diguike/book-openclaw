@@ -34,7 +34,7 @@ last_synced: ""
 ## 第四部分：Workspace Kernel — 文件驱动的 Agent 设计哲学
 
 - [第 13 章 — Bootstrap Files：SOUL.md 与文件驱动的 Agent 人格](./chapters/ch13-bootstrap-files/README.md)
-- [第 14 章 — Skills 系统：元数据索引、按需加载与生态治理](./chapters/ch14-skills/README.md)
+- [第 14 章 — Skills 系统：元数据索引与按需加载](./chapters/ch14-skills/README.md)
 - [第 15 章 — Memory 系统：四层记忆架构与混合检索](./chapters/ch15-memory/README.md)
 - [第 16 章 — Heartbeat 与 Cron：Agent 的主动行为机制](./chapters/ch16-heartbeat-cron/README.md)
 

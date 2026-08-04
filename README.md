@@ -39,6 +39,8 @@ OpenClaw 是目前最活跃的开源 Agent 项目之一，TypeScript 实现，�
 ## 配套资源
 
 - 参考源码：`_references/openclaw/`
+- 模型 API：跟着做 Mini OpenClaw 需要一个模型服务，国内可用[阿里云百炼](https://www.aliyun.com/benefit/ai/aistar?userCode=okjhlpr5)
+- 想先跑一个完整的 OpenClaw 再读源码：[阿里云轻量服务器有一键部署镜像](https://www.aliyun.com/activity/ecs/clawdbot?userCode=okjhlpr5)，省掉自己配环境的时间
 - 飞书 Wiki：（发布后补充）
 - GitHub：（发布后补充）
 
